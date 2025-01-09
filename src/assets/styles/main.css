@@ -1,0 +1,24 @@
+/* src/assets/styles/main.css */
+
+/* Importação do Tailwind CSS */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Ou use a sintaxe alternativa com @tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Suas customizações podem vir aqui */
+@layer base {
+  body {
+    @apply bg-gray-50;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-blue-500 text-white rounded-md;
+  }
+}
