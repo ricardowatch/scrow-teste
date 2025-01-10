@@ -1,4 +1,4 @@
-<!-- src/components/common/BaseInput.vue -->
+<!-- src/components/layout/BaseInput.vue -->
 <template>
     <div class="mb-4">
       <label v-if="label" class="block text-white mb-2">{{ label }}</label>

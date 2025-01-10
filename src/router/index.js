@@ -1,20 +1,27 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import AddChannelView from '../views/AddChannelView.vue'
+import CanaisView from '@/views/lineares/CanaisView.vue'
 
 const routes = [
   {
-    path: '/',
-    redirect: '/canal/adicionar'  // Redireciona a rota raiz
+    patch: '/', //raiz
+    redirect: '/lineares/canais'
   },
   {
-    path: '/canal/adicionar',
-    name: 'AddChannel',
-    component: AddChannelView
+    path: '/lineares/canais',
+    name: 'canais',
+    component: CanaisView,
+    meta: {
+      title: 'Canais ao vivo',
+      description: 'Gestão dos canais ao vivo da plataforma',
+      breadcrumb: 'Canais ao vivo',
+      showEmptyState: true // Mostra o estado vazio por padrão
+    }
   }
+  // Outras rotas aqui...
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes
 })
 
