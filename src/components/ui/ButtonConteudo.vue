@@ -1,7 +1,6 @@
-<!-- components/ui/ButtonConteudo.vue -->
 <template>
   <button
-    class="text-sm px-4 py-2 rounded-lg transition duration-200"
+    class="w-[101px] h-[40px] text-[16px] font-semibold font-inter rounded-md transition duration-200"
     :class="buttonClass"
     @click="onClick"
   >
@@ -22,7 +21,7 @@ export default {
     buttonClass() {
       const baseClass = "focus:outline-none";
       const typeClasses = {
-        primary: "bg-purple-600 hover:bg-purple-700 text-white",
+        primary: "bg-[#811D56] hover:bg-[#991E61] text-white", // Cor alterada para #811D56
         secondary: "bg-gray-700 hover:bg-gray-600 text-white",
       };
       return `${baseClass} ${typeClasses[this.type] || ""}`;
