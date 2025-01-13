@@ -39,6 +39,9 @@
             <li class="p-2 cursor-pointer" @click="onSubmenuClick('Esportes')">
               <p class="hover:text-purple-400"> Esportes </p>
             </li>
+            <li class="p-2 cursor-pointer" @click="onSubmenuClick('Lista')">
+              <p class="hover:text-purple-400"> Lista </p>
+            </li>
           </ul>
         </li>
 
@@ -137,6 +140,15 @@ export default {
     },
     onSubmenuClick(name) {
       console.log(`Submenu clicado: ${name}`);
+      
+      // Adiciona navegação baseada no nome do item
+      if (name === 'Canais ao Vivo') {
+        this.$router.push('/lineares');
+      } else if (name === 'Esportes') {
+        this.$router.push('/esportes');
+      } else if (name === 'Lista') {
+        this.$router.push('/listchannel'); // Navega para o componente ListChannel
+      }
     },
   },
 };

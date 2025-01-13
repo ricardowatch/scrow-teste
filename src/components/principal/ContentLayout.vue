@@ -1,3 +1,4 @@
+<!-- Esse é a estrutura principal que envolve todo CMS-->
 <template>
   <div class="flex h-screen flex-col">
     <!-- Header -->
@@ -8,15 +9,17 @@
       <AppSidebar class="w-64 bg-black text-white border-r-[1px] border-[#6b6c6d]"></AppSidebar>
 
       <!-- Main Content Area -->
-      <AppMain class="flex-1 bg-[#121212] text-white p-6"></AppMain>
+      <AppMain class="flex-1 bg-[#121212] text-white p-6">
+        <slot></slot>  <!-- Slot adicionado aqui -->
+      </AppMain>
     </div>
   </div>
 </template>
 
 <script>
-import AppHeader from '@/components/structural/AppHeader.vue';
-import AppSidebar from '@/components/structural/AppSidebar.vue';
-import AppMain from '@/components/structural/AppMain.vue';
+import AppHeader from '@/components/structural/AppHeader.vue'; //topo com icones, thumbnail, logo etc
+import AppSidebar from '@/components/structural/AppSidebar.vue'; //menu lateral
+import AppMain from '@/components/structural/AppMain.vue'; //conteúdo central que é dinâmico
 
 export default {
   name: 'ContentLayout',

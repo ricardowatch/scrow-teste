@@ -6,7 +6,8 @@
 </template>
 
 <script>
-import ContentLayout from '@/components/principal/ContentLayout.vue'
+import ContentLayout from 
+'@/components/principal/ContentLayout.vue'
 
 export default {
   name: 'App',

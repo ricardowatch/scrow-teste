@@ -1,23 +1,43 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import CanaisView from '@/views/lineares/CanaisView.vue'
+import EsportesView from '@/views/lineares/EsportesView.vue'
+import ListChannel from '@/views/lineares/ListChannel.vue' // Nova importação
 
 const routes = [
   {
-    patch: '/', //raiz
-    redirect: '/lineares/canais'
+    path: '/',
+    redirect: '/home'
   },
   {
-    path: '/lineares/canais',
+    path: '/lineares',
     name: 'canais',
     component: CanaisView,
     meta: {
       title: 'Canais ao vivo',
       description: 'Gestão dos canais ao vivo da plataforma',
-      breadcrumb: 'Canais ao vivo',
-      showEmptyState: true // Mostra o estado vazio por padrão
+      showEmptyState: true
+    }
+  },
+  {
+    path: '/esportes',
+    name: 'esportes',
+    component: EsportesView,
+    meta: {
+      title: 'Esportes',
+      description: 'Gestão de conteúdo esportivo',
+      showEmptyState: true
+    }
+  },
+  {
+    path: '/listchannel',
+    name: 'listchannel',
+    component: ListChannel,
+    meta: {
+      title: 'Lista de Canais',
+      description: 'Gestão da lista de canais da plataforma',
+      showEmptyState: true
     }
   }
-  // Outras rotas aqui...
 ]
 
 const router = createRouter({
