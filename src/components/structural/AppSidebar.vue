@@ -24,7 +24,7 @@
         <!-- Item principal: Lineares -->
         <li class="pt-8 pb-2 pl-6 pr-8">
           <div @click="toggleLineares" class="cursor-pointer flex items-center">
-            <img src="@/assets/images/icons/signal.png" alt="Lineares" class="h-5 w-5 mr-2" />
+            <img src="@/assets/images/icons/tv.png" alt="Lineares" class="h-5 w-5 mr-2" />
             <span class="text-left">Lineares</span>
             <span class="flex items-center ml-auto">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
